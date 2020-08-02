@@ -10,10 +10,10 @@
 	</parent>
 	
 	<groupId>com.visiblethread.demo</groupId>
-	<artifactId>user</artifactId>
+	<artifactId>document-analyzer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>user</name>
-	<description>Service for anything to do with users</description>
+	<name>Document Analyzer</name>
+	<description>Service for analysing documents</description>
 
 	<properties>
 		<java.version>8</java.version>
