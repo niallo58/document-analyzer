@@ -52,6 +52,12 @@ public class AnalysisController {
     @ResponseStatus(HttpStatus.OK)
 	public List<User> getUsersWhoDidNotUploadDocument(@RequestParam("fromDate") String fromDate,
 			@RequestParam("toDate") String toDate) {
+		/**
+		 * NOTE : I am using strings here for the dates as Swagger was having issues converting Strings to Dates
+		 * 		  so rather then wasting limited time looking into why this was happening and how to resolve it,
+		 * 		  I put the dates in here as strings. I would not do this on production code, but would have
+		 * 		  both parameters as LocalDateTime
+		 */
 		LocalDateTime fromDateTime = LocalDateTime.parse(fromDate, DateTimeFormatter.ISO_ZONED_DATE_TIME);
 		LocalDateTime toDateTime = LocalDateTime.parse(toDate, DateTimeFormatter.ISO_ZONED_DATE_TIME);
 		
